@@ -1,0 +1,30 @@
+{
+  "name": "hairline-local",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A local library of isometric line figures that answer the pointer: the 33 from @lucasmarkes/hairline (MIT) plus my own.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": ["dist", "src", "upstream/LICENSE"],
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/types/index.d.ts", "default": "./dist/index.js" },
+    "./react": { "types": "./dist/types/react.d.ts", "default": "./dist/react.js" },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --config vite.lib.config.ts && tsc -p tsconfig.build.json",
+    "build:gallery": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": { "react": ">=18" },
+  "peerDependenciesMeta": { "react": { "optional": true } },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  }
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="./"><b id="title"></b><span id="count"></span></a>
+    <nav class="controls">
+      <label class="range">intensity <input id="intensity" type="range" min="0" max="1" step="0.05" value="0.5" /><output id="intensity-out">0.50</output></label>
+      <button id="play" class="toggle" type="button" aria-pressed="false">play</button>
+      <button id="theme" class="toggle" type="button" aria-pressed="false">dark</button>
+    </nav>
+  </header>
+
+  <main id="shelves"></main>
+
+  <footer><a href="../NOTICE.md" id="credit">33 figures from lucasmarkes/hairline, MIT</a></footer>
+
+  <dialog id="viewer">
+    <div class="viewer">
+      <div class="stage"><div id="big"></div></div>
+      <aside>
+        <div class="row"><span class="idx" id="v-idx"></span><button class="plain" id="close" type="button">esc</button></div>
+        <h2 id="v-name"></h2>
+        <p id="v-zh"></p>
+        <dl>
+          <dt>read</dt><dd id="big-read"></dd>
+          <dt>intensity</dt><dd><label class="range"><input id="v-intensity" type="range" min="0" max="1" step="0.05" value="0.5" /><output id="v-out">0.50</output></label></dd>
+          <dt>stronger</dt><dd id="v-stronger"></dd>
+          <dt>play</dt><dd><button id="v-play" class="toggle" type="button" aria-pressed="false">off</button></dd>
+        </dl>
+        <div class="row tabs">
+          <span><button class="plain" type="button" data-tab="react" aria-pressed="true">react</button><button class="plain" type="button" data-tab="vanilla" aria-pressed="false">vanilla</button></span>
+          <button class="plain" id="copy" type="button">copy</button>
+        </div>
+        <pre><code id="code"></code></pre>
+        <div class="row pager"><button class="plain" id="prev" type="button">← prev</button><button class="plain" id="next" type="button">next →</button></div>
+      </aside>
+    </div>
+  </dialog>
+
+  <script type="module" src="./main.ts"></script>
+</body>
+</html>
