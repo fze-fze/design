@@ -7,10 +7,14 @@
  * copy and its tests hold the two together.
  */
 
-export type FigureId = "riffle" | "terrain" | "exploded" | "phosphor" | "slow" | "turntable" | "keyboard" | "elevator" | "phone" | "laptop" | "terminal" | "cabinet" | "branches" | "vault" | "lockers" | "padlock" | "patch" | "dish" | "router" | "loupe" | "sieve" | "rail" | "plug" | "query" | "drawer" | "basket" | "plot" | "hub" | "relay" | "settle" | "format" | "rebuild" | "stack" | "dominoes" | "faders" | "cradle" | "metronome" | "globe" | "desk" | "desktop" | "abacus" | "compass" | "sundial" | "puzzle" | "hourglass" | "stapler" | "pencilcase";
+export type FigureId = "riffle" | "terrain" | "exploded" | "phosphor" | "slow" | "turntable" | "keyboard" | "elevator" | "phone" | "laptop" | "terminal" | "cabinet" | "branches" | "vault" | "lockers" | "padlock" | "patch" | "dish" | "router" | "loupe" | "sieve" | "rail" | "plug" | "query" | "drawer" | "basket" | "plot" | "hub" | "relay" | "settle" | "format" | "rebuild" | "stack" | "dominoes" | "faders" | "cradle" | "metronome" | "globe" | "desk" | "desktop" | "abacus" | "compass" | "sundial" | "puzzle" | "hourglass" | "stapler" | "pencilcase" | "fan" | "bellows" | "orrery" | "rosette";
 
 /** Each figure's number at intensity 0, 0.5 and 1. Slow's falls: a slower clock is a stronger answer. */
 export const TABLE: Record<FigureId, readonly [number, number, number]> = {
+  fan: [0.55, 0.8, 1],
+  bellows: [0.45, 0.72, 1],
+  orrery: [0.4, 0.75, 1],
+  rosette: [0.5, 0.8, 1],
   riffle: [0, 40, 90], // stagger, ms
   terrain: [1.5, 3, 5], // radius, cells
   exploded: [12, 28, 40], // gap, viewBox units

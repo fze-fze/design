@@ -1,4 +1,8 @@
 import { create, type Figure, type HairlineOptions } from "./mount";
+import { mount as fanEngine } from "./figures/fan";
+import { mount as bellowsEngine } from "./figures/bellows";
+import { mount as orreryEngine } from "./figures/orrery";
+import { mount as rosetteEngine } from "./figures/rosette";
 import { mount as basketEngine } from "./figures/basket";
 import { mount as branchesEngine } from "./figures/branches";
 import { mount as cabinetEngine } from "./figures/cabinet";
@@ -545,5 +549,38 @@ export function pencilcase(el: HTMLElement, options?: HairlineOptions): Figure {
     rest: "rest",
     engine: pencilcaseEngine,
     tour: [[110, 160], [215, 160], [300, 160], null],
+  }, el, options);
+}
+
+/** A folding fan opens pleat by pleat as the pointer crosses it. */
+export function fan(el: HTMLElement, options?: HairlineOptions): Figure {
+  return create({
+    id: "fan", label: "A folding fan opens pleat by pleat as the pointer crosses it.", rest: "rest",
+    engine: fanEngine, tour: [[105, 170], [198, 160], [300, 150], null],
+  }, el, options);
+}
+
+/** A folding camera extends its bellows along a focusing rail. */
+export function bellows(el: HTMLElement, options?: HairlineOptions): Figure {
+  return create({
+    id: "bellows", label: "A folding camera extends its bellows along a focusing rail.", rest: "rest",
+    engine: bellowsEngine, tour: [[105, 170], [198, 160], [300, 150], null],
+  }, el, options);
+}
+
+/** Three planets sweep around a miniature mechanical sun at different rates. */
+export function orrery(el: HTMLElement, options?: HairlineOptions): Figure {
+  return create({
+    id: "orrery", label: "Three planets sweep around a miniature mechanical sun at different rates.", rest: "rest",
+    engine: orreryEngine, tour: [[105, 170], [198, 160], [300, 150], null],
+  }, el, options);
+}
+
+
+/** An eccentric pen on a rolling disc traces a three-lobed rosette. */
+export function rosette(el: HTMLElement, options?: HairlineOptions): Figure {
+  return create({
+    id: "rosette", label: "An eccentric pen on a rolling disc traces a three-lobed rosette.", rest: "rest",
+    engine: rosetteEngine, tour: [[105, 170], [198, 160], [300, 150], null],
   }, el, options);
 }

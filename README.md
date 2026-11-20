@@ -1,7 +1,7 @@
 # hairline-local
 
-等距线稿、会回应指针的图形组件库。33 个来自开源的 [hairline](https://github.com/lucasmarkes/hairline)（MIT），外加 14 个自己画的：
-`dominoes`（多米诺）、`faders`（调音台推子）、`cradle`（牛顿摆）、`metronome`（节拍器）、`globe`（地球仪）、`desk`（升降桌）、`desktop`（电脑桌面）、`abacus`（算盘）、`compass`（磁针阵）、`sundial`（日晷）、`puzzle`（滑块拼图）、`hourglass`（沙漏）、`stapler`（订书机）、`pencilcase`（笔袋）。零运行时依赖，React 为可选。
+等距线稿、会回应指针的图形组件库。33 个来自开源的 [hairline](https://github.com/lucasmarkes/hairline)（MIT），外加 18 个自己画的：
+`dominoes`（多米诺）、`faders`（调音台推子）、`cradle`（牛顿摆）、`metronome`（节拍器）、`globe`（地球仪）、`desk`（升降桌）、`desktop`（电脑桌面）、`abacus`（算盘）、`compass`（磁针阵）、`sundial`（日晷）、`puzzle`（滑块拼图）、`hourglass`（沙漏）、`stapler`（订书机）、`pencilcase`（笔袋）、`fan`（折扇）、`bellows`（皮腔相机）、`orrery`（太阳系仪）、`rosette`（花线绘图仪）。零运行时依赖，React 为可选。
 
 ## 预览
 

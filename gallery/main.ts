@@ -21,9 +21,10 @@ const h = <K extends keyof HTMLElementTagNameMap>(tag: K, cls?: string, text?: s
 const two = (n: number) => String(n).padStart(2, "0");
 
 const params = new URLSearchParams(location.search);
-const only = params.get("only");
 let intensity = Number(params.get("intensity") ?? 0.5), play = params.has("play");
 const live: Figure[] = [], all: Entry[] = SHELVES.flatMap((s) => s.figures);
+
+const only = all.find(f => f.id === params.get("only"))?.id;
 
 /* ---------- shelves ---------- */
 

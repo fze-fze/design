@@ -2,7 +2,7 @@ import {
   forwardRef, useCallback, useEffect, useLayoutEffect, useRef,
   type ComponentPropsWithoutRef, type ForwardRefExoticComponent, type RefAttributes,
 } from "react";
-import { abacus, compass, sundial, puzzle, hourglass, stapler, pencilcase, basket, branches, cabinet, dish, drawer, elevator, exploded, format, hub, keyboard, laptop, lockers, loupe, padlock, patch, phone, phosphor, plot, plug, query, rail, rebuild, relay, riffle, router, settle, sieve, slow, stack, terminal, terrain, turntable, vault, dominoes, faders, cradle, metronome, globe, desk, desktop, type Figure, type HairlineOptions } from "./index";
+import { fan, bellows, orrery, rosette, abacus, compass, sundial, puzzle, hourglass, stapler, pencilcase, basket, branches, cabinet, dish, drawer, elevator, exploded, format, hub, keyboard, laptop, lockers, loupe, padlock, patch, phone, phosphor, plot, plug, query, rail, rebuild, relay, riffle, router, settle, sieve, slow, stack, terminal, terrain, turntable, vault, dominoes, faders, cradle, metronome, globe, desk, desktop, type Figure, type HairlineOptions } from "./index";
 
 /**
  * @lucasmarkes/hairline/react — the thirty-three figures as components.
@@ -147,3 +147,16 @@ export const Hourglass = make("Hourglass", hourglass);
 export const Stapler = make("Stapler", stapler);
 /** A zip-round pencil case. Going across, the pointer first undoes the zip, then lifts the lid on what lies inside. `intensity` opens the lid further back. */
 export const PencilCase = make("PencilCase", pencilcase);
+
+/** A folding fan opens pleat by pleat as the pointer crosses it. */
+export const Fan = make("Fan", fan);
+
+/** A folding camera extends its bellows along a focusing rail. */
+export const Bellows = make("Bellows", bellows);
+
+/** Three planets sweep around a miniature mechanical sun at different rates. */
+export const Orrery = make("Orrery", orrery);
+
+
+/** An eccentric pen on a rolling disc traces a three-lobed rosette. */
+export const Rosette = make("Rosette", rosette);
